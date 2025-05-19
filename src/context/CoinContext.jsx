@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-const apiKey = import.meta.env.COINGECKO_API_KEY;
+const apiKey = import.meta.env.VITE_COINGECKO_API_KEY;
 
 export const CoinContext = createContext();
 
@@ -39,7 +39,7 @@ const CoinContextProvider = (props) => {
   };
 
   return (
-    <CoinContext.Provider value={{ contextValue }}>
+    <CoinContext.Provider value={ contextValue }>
       {props.children}
     </CoinContext.Provider>
   );
