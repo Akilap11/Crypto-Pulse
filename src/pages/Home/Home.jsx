@@ -5,8 +5,24 @@ import { CoinContext } from "../../context/CoinContext";
 
 const Home = () => {
   const { allCoin, currency } = useContext(CoinContext);
-
   const [displayCoin, setDisplayCoin] = useState([]);
+
+  const [input, setInput] = useState('');
+
+  const inputHandler = (e) => {
+    setInput(e.target.value);
+    if (e.target.value === '') {
+      setDisplayCoin(allCoin);
+    }
+  }
+
+  const searchHandler = async(e) => {
+    e.preventDefault();
+    const filteredCoins=await allCoin.filter((item) => {
+      return item.name.toLowerCase().includes(input.toLowerCase()) || item.symbol.toLowerCase().includes(input.toLowerCase());
+    });
+    setDisplayCoin(filteredCoins);
+  }
 
   useEffect(() => {
     setDisplayCoin(allCoin);
@@ -21,8 +37,8 @@ const Home = () => {
 
         <p>Buy and sell cryptocurrencies, digital assets and NFTs</p>
 
-        <form>
-          <input type="text" placeholder="Search Crypto.." />
+        <form onSubmit={searchHandler}>
+          <input onChange={inputHandler} value={input} type="text" placeholder="Search Crypto.." required/>
           <button type="submit">Search</button>
         </form>
       </div>
