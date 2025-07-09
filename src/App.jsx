@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import Coin from './pages/Coin/Coin'
-import Home from './pages/Home/Home'
+import Home from './pages/Home/home'
 import Footer from './components/Footer/Footer'
 
 const App = () => {
