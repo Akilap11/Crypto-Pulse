@@ -1,5 +1,9 @@
 # 📈 CryptoPulse – Real-Time Crypto Price Tracker
 
+![App Preview](https://raw.githubusercontent.com/Akilap11/Crypto-Pulse/main/public/preview.png)
+
+## 🔥 Overview
+
 A responsive cryptocurrency price tracking application built with **React JS**, powered by the **CoinGecko API** to fetch live market data.
 Now includes **coin detail pages with interactive charts** and improved styling.
 
