@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import arrow_icon from "../../assets/arrow_icon.png";
 import { CoinContext } from "../../context/CoinContext";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
@@ -11,53 +10,60 @@ const Navbar = () => {
   const currencyHandler = (e) => {
     switch (e.target.value) {
       case "usd":
-        setCurrency({
-          name: "USD",
-          symbol: "$",
-        });
+        setCurrency({ name: "USD", symbol: "$" });
         break;
       case "lkr":
-        setCurrency({
-          name: "LKR",
-          symbol: "Rs",
-        });
+        setCurrency({ name: "LKR", symbol: "Rs" });
         break;
       case "inr":
-        setCurrency({
-          name: "INR",
-          symbol: "₹",
-        });
+        setCurrency({ name: "INR", symbol: "₹" });
         break;
       default:
-        {
-          setCurrency({
-            name: "USD",
-            symbol: "$",
-          });
-        }
-        break;
+        setCurrency({ name: "USD", symbol: "$" });
     }
   };
 
   return (
     <div className="navbar">
-      <Link to={'/'}>
-        <img src={logo} alt="Spotify Logo" className="logo" />
-      </Link>
+      <NavLink to="/">
+        <img src={logo} alt="Logo" className="logo" />
+      </NavLink>
+
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => isActive ? "active-link" : ""}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="#about">Features</Link>
+          <NavLink 
+            to="/market-overview" 
+            className={({ isActive }) => isActive ? "active-link" : ""}
+          >
+            Markets
+          </NavLink>
         </li>
         <li>
-          <Link to="#services">Pricing</Link>
+          <NavLink 
+            to="/news-updates" 
+            className={({ isActive }) => isActive ? "active-link" : ""}
+          >
+            News
+          </NavLink>
         </li>
         <li>
-          <Link to="#contact">Blog</Link>
+          <NavLink 
+            to="/learn-crypto" 
+            className={({ isActive }) => isActive ? "active-link" : ""}
+          >
+            Learn
+          </NavLink>
         </li>
       </ul>
+
       <div className="nav-right">
         <select onChange={currencyHandler} className="currency-select">
           <option value="usd">USD</option>

@@ -1,62 +1,66 @@
-# 📈 CryptoPulse – Real-Time Crypto Price Tracker
+# CryptoPulse – Real-Time Crypto Price Tracker
 
 ![App Preview](https://raw.githubusercontent.com/Akilap11/Crypto-Pulse/main/public/preview.png)
 
-## 🔥 Overview
+## Overview
 
-A responsive cryptocurrency price tracking application built with **React JS**, powered by the **CoinGecko API** to fetch live market data.
-Now includes **coin detail pages with interactive charts** and improved styling.
+CryptoPulse is a real-time cryptocurrency market tracking application focused on price trends, historical data visualization, and clear presentation of market information.
 
----
+The project was built to practice working with third-party APIs, managing client-side state, and designing a responsive UI for data-heavy applications. It includes individual coin pages with interactive charts and supports multiple fiat currencies.
 
-## 🚀 Features
+## Features
 
-* 🔄 Real-time cryptocurrency price updates
-* 📊 Interactive charts with historical data
-* 📅 Custom date range selection for market trends
-* 📱 Responsive UI across devices
-* 💡 Individual coin detail pages with styled layouts
+- Real-time cryptocurrency price tracking using live market data
+- Individual coin detail pages with historical price charts
+- Custom date range selection for trend analysis
+- Currency switching (USD, LKR, INR)
+- Responsive layout optimized for desktop and mobile
+- Clean navigation and client-side routing
 
----
+## Tech Stack
 
-## 🛠 Tech Stack
+- React – Frontend framework
+- CoinGecko API – Cryptocurrency market data
+- Axios – API communication
+- Recharts – Data visualization
+- React DatePicker – Date range selection
+- React Router – Client-side routing
 
-* **React JS** – Frontend framework
-* **CoinGecko API** – Market data source
-* **Axios** – API requests
-* **Recharts** – Data visualization
-* **React DatePicker** – Date range selection
+## Installation and Setup
 
----
-
-## 📦 Installation
+Clone the repository and install dependencies:
 
 ```bash
-# Clone the repo
-git clone https://github.com/Akilap11/Crypto-Price-Tracker.git
-
-# Navigate to project
-cd Crypto-Price-Tracker
-
-# Install dependencies
+git clone https://github.com/Akilap11/Crypto-Pulse.git
+cd Crypto-Pulse
 npm install
-```
+````
 
-## 🔑 API Key Setup
+## Environment Variables
 
-This project requires a **CoinGecko API key** to fetch live data.
+This project uses the CoinGecko API and requires an API key.
 
-1. Create a `.env` file in the project root.
-2. Add your CoinGecko API key like this:
+Create a `.env` file in the project root and add:
 
 ```env
 VITE_COINGECKO_API_KEY=your_api_key_here
 ```
 
-3. Run the app:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-For a free API key, visit [CoinGecko API](https://www.coingecko.com/api).
+## Notes and Limitations
+
+* API rate limits are handled at the client level
+* Market data depends on CoinGecko availability and response time
+* Authentication is intentionally omitted to keep the app lightweight
+
+## Future Improvements
+
+* User watchlists with persistence
+* Coin comparison view
+* Improved caching to reduce API calls
+* Optional authentication for personalized features

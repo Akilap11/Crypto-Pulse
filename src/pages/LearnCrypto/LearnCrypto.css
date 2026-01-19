@@ -1,0 +1,206 @@
+.learn {
+  max-width: 1400px;
+  margin: 80px auto 40px;
+  padding: 20px;
+}
+
+.learn-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+}
+
+.learn-header h1 {
+  font-size: 3rem;
+  margin: 0 0 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.learn-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.learn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 12px 30px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: #666;
+}
+
+.tab:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.course-card {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.course-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.course-card h3 {
+  font-size: 1.4rem;
+  margin: 0 0 15px;
+  color: #333;
+}
+
+.course-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 25px;
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+}
+
+.glossary-section {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.glossary-section h2 {
+  font-size: 2.2rem;
+  margin: 0 0 10px;
+  text-align: center;
+  color: #333;
+}
+
+.glossary-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 40px;
+}
+
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.glossary-card {
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.2s;
+}
+
+.glossary-card:hover {
+  transform: translateX(5px);
+}
+
+.glossary-card h4 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #667eea;
+  font-weight: 700;
+}
+
+.glossary-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .learn {
+    margin-top: 100px;
+  }
+
+  .learn-header h1 {
+    font-size: 2rem;
+  }
+
+  .learn-header p {
+    font-size: 1rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    width: 100%;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glossary-section {
+    padding: 30px 20px;
+  }
+
+  .glossary-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .glossary-grid {
+    grid-template-columns: 1fr;
+  }
+}

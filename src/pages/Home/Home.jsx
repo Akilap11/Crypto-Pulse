@@ -51,8 +51,7 @@ const Home = () => {
           />
           <datalist id="coinlist">
             {allCoin.map((item, index) => (
-              <option key={index} value={item.name}>
-              </option>
+              <option key={index} value={item.name}></option>
             ))}
           </datalist>
 
